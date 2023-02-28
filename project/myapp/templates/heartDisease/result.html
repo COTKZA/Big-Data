@@ -1,0 +1,26 @@
+{% extends 'heartDisease/main.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Predicton</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    {% block content %}
+    <div class="container-sm">
+      <br /><br />
+      <h1>AI ตรวจวินิจฉัยโรคหัวใจพบว่าเป็น: {{result}}</h1>
+      <br /><br />
+      <h1>
+        หมายเหตุ: ถ้าผลเป็น 0 = คือเป็นปกติ ไม่เป็นโรคหัวใจ แต่ถ้าผลเป็น 1 =
+        คือเป็นโรคหัวใจต้องรีบปรึกษาแพทย์ด่วน
+      </h1>
+      <br />
+      <a href="{% url 'predictor' %}"><h2>คลิกเพิ่มข้อมูลใหม่</h2></a
+      ><br /><br />
+    </div>
+    {% endblock %}
+  </body>
+</html>

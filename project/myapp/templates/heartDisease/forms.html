@@ -1,0 +1,93 @@
+{% extends 'heartDisease/main.html' %}
+
+<title>{% block title %}Home{% endblock title %}</title>
+
+{% block content %} 
+
+{% comment %} {% include 'iris/slider.html' %} {% endcomment %}
+
+<br />
+
+<div class="container-sm">
+  <h1>AI ผู้ช่วยหมอตรวจวินิจฉัยโรคหัวใจ</h1>
+  <br />
+  <form action="" method="POST">
+    {% csrf_token %}
+    <h4>
+      <div class="text-center"><label for="fname">age</label></div>
+      <br />
+      <input type="float" name="age" required placeholder="age" /><br /><br />
+      <div class="text-center"><label for="fname">sex</label></div>
+      <br />
+      <input type="float" name="sex" required placeholder="sex" /><br /><br />
+      <div class="text-center"><label for="fname">cp</label></div>
+      <br />
+      <input type="float" name="cp" required placeholder="cp" /><br /><br />
+      <div class="text-center"><label for="fname">trestbps</label></div>
+      <br />
+      <input
+        type="float"
+        name="trestbps"
+        required
+        placeholder="trestbps"
+      /><br /><br />
+      <div class="text-center"><label for="fname">chol</label></div>
+      <br />
+      <input type="float" name="chol" required placeholder="chol" /><br /><br />
+      <div class="text-center"><label for="fname">fbs</label></div>
+      <br />
+      <input type="float" name="fbs" required placeholder="fbs" /><br /><br />
+      <div class="text-center"><label for="fname">restecg</label></div>
+      <br />
+      <input
+        type="float"
+        name="restecg"
+        required
+        placeholder="restecg"
+      /><br /><br />
+      <div class="text-center"><label for="fname">thalach</label></div>
+      <br />
+      <input
+        type="float"
+        name="thalach"
+        required
+        placeholder="thalach"
+      /><br /><br />
+      <div class="text-center"><label for="fname">exang</label></div>
+      <br />
+      <input
+        type="float"
+        name="exang"
+        required
+        placeholder="exang"
+      /><br /><br />
+      <div class="text-center"><label for="fname">oldpeak</label></div>
+      <br />
+      <input
+        type="float"
+        name="oldpeak"
+        required
+        placeholder="oldpeak"
+      /><br /><br />
+      <div class="text-center"><label for="fname">slope</label></div>
+      <br />
+      <input
+        type="float"
+        name="slope"
+        required
+        placeholder="slope"
+      /><br /><br />
+      <div class="text-center"><label for="fname">ca</label></div>
+      <br />
+      <input type="float" name="ca" required placeholder="ca" /><br /><br />
+      <div class="text-center"><label for="fname">thal</label></div>
+      <br />
+      <input type="float" name="thal" required placeholder="thal" /><br /><br />
+      <input type="submit" /><br />
+    </h4>
+  </form>
+  {% comment %} {% include 'result.html' %} {% endcomment %}
+  <br /><br />
+</div>
+
+{% endblock %}
